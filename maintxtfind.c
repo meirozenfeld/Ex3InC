@@ -2,35 +2,37 @@
 #include <stdio.h>
 int main()
 {
-    // printf("entered to prog\n");
-    // char line[LINE];
-    // for(int i = 0; i < 5; i++)
-    // {
-    //     getLine(line);
-    //     printf("%s",line);
-
-    // }
-    // char txt;
-    // while (txt = getc(stdin))
-    // {
-    //     getword();
-    // }
-    char str[WORD];
-    getword(str);
-    char func[WORD];
-    getword(func);
-    char line[1];
-    getLine(line);
-    if(func[0]=='a')
+    char firstword[WORD];
+    char c;
+    int i = 0;
+    while ((c = getc(stdin)) != '\t' && c != ' ' && c != '\n')//save first wort to check
     {
-        // printf("entered to a\n");
-        print_lines(str);
+        firstword[i] = c;
+        i++;
     }
-    else if(func[0]=='b')
+    firstword[i] ='\0';
+    char option;
+    while ((c = getc(stdin)) != '\n') // save a or b option
     {
-        // printf("entered to b\n");
-        print_similar_words(str);
+        if (c == 'a')
+        {
+            option = 'a';
+        }
+        if (c == 'b')
+        {
+            option = 'b';
+        }
     }
-    
+    switch (option) 
+    {
+    case 'a':
+        print_lines(firstword);
+        break;
+    case 'b':
+        print_similar_words(firstword);
+        break;
+    default:
+        printf("Error");
+    }
     return 0;
 }
