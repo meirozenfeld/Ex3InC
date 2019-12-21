@@ -17,7 +17,7 @@ void printarr(int *arr)
 }
 int main()
 {
-    int arr[size];
+    int arr[size]={0};
     for (int i = 0; i < size; i++)
     {
         int num;
