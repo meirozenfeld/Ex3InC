@@ -9,8 +9,8 @@ FLAGS= -Wall -g
 
 all: libmylib libmylib2 isort txtfind
 
-libmylib: $(OBJECTS_isort)
-	$(AR) -rcs libmylib $(OBJECTS_isort)	
+# libmylib: $(OBJECTS_isort)
+# 	$(AR) -rcs libmylib $(OBJECTS_isort)	
        
 isort: $(OBJECTS_isort) $(OBJECTS_mainisort) 
 	$(CC) $(FLAGS) -o isort $(OBJECTS_isort) $(OBJECTS_mainisort) 	
@@ -25,8 +25,8 @@ mainisort.o: mainisort.c isort.h
 
 
 
-libmylib2: $(OBJECTS_txtfind)
-	$(AR) -rcs libmylib2 $(OBJECTS_txtfind)	
+# libmylib2: $(OBJECTS_txtfind)
+# 	$(AR) -rcs libmylib2 $(OBJECTS_txtfind)	
        
 txtfind: $(OBJECTS_txtfind) $(OBJECTS_maintxtfind) 
 	$(CC) $(FLAGS) -o txtfind $(OBJECTS_txtfind) $(OBJECTS_maintxtfind) 	

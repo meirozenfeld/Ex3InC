@@ -1,6 +1,8 @@
 #include "txtfind.h"
 #include <stdio.h>
 #include <string.h>
+#define LINE 256
+#define WORD 30
 // get char after cahr and save it in array, return size of chars in line (not use)
 // int getLine(char s[])
 // {
