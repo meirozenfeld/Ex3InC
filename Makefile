@@ -1,4 +1,4 @@
-# -*- makefile -*-
+# -*- Makefile -*-
 CC=gcc
 AR=ar
 OBJECTS_mainisort=mainisort.o
