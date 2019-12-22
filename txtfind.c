@@ -111,6 +111,6 @@ void print_similar_words(char *str)
     while (getword(word))
     {
         if (similar_one(word, str))
-            printf("%s", word);
+            printf("%s ", word);
     }
 }
