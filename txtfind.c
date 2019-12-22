@@ -85,7 +85,7 @@ void print_similar_words(char *str)
         if (word[i] == '\n'||word[i] == '\t'||word[i] == ' ')
         {
             word[i] = '\0';
-            if (similar_one(word, str)) printf("%s ", word);
+            if (similar_one(word, str)) printf("%s \n", word);
             i = -1;
         }
         i++;
